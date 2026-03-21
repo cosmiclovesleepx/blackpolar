@@ -13,6 +13,12 @@ const RETRY_DELAY = 5000;  // ms entre reintentos
 const MAX_RETRIES = 3;
 
 export const connectDB = async (retries = 0) => {
+  // Si DB está desactivada, omitir conexión
+  if (env.DISABLE_DB) {
+    logger.warn('Base de datos desactivada (DISABLE_DB=true) — omitiendo conexión.');
+    return;
+  }
+
   if (isConnected) {
     logger.debug('MongoDB ya conectado, reutilizando conexión.');
     return;

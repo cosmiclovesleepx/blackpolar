@@ -34,7 +34,9 @@ export const env = {
   PORTFOLIOS_PORT: num('PORTFOLIOS_PORT', 4000),
   TLM_PORT:        num('TLM_PORT',        5000),
 
+  // MongoDB — desactivado automáticamente en producción
   MONGODB_URI: str('MONGODB_URI', 'mongodb://obsidian-db-admin:e2rGo5IehihqGW5E@ac-vfspmaw-shard-00-00.aowmsyz.mongodb.net:27017,ac-vfspmaw-shard-00-01.aowmsyz.mongodb.net:27017,ac-vfspmaw-shard-00-02.aowmsyz.mongodb.net:27017/?ssl=true&replicaSet=atlas-jeb6nv-shard-0&authSource=admin&appName=Obsidian-DB-1'),
+  DISABLE_DB: str('DISABLE_DB', 'true') === 'true', // Si es 'true', desactiva DB (por defecto true en producción)
 
   cors: {
     origins: process.env.CORS_ORIGIN ? list('CORS_ORIGIN') : '*',
