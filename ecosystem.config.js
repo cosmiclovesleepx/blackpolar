@@ -1,17 +1,17 @@
 /**
- * PM2 Ecosystem Configuration (.cjs para ESM)
+ * PM2 Ecosystem Configuration (ES Module)
  *
  * Uso:
- *   pm2 start ecosystem.config.cjs          # Iniciar todos los servers
+ *   pm2 start ecosystem.config.js          # Iniciar todos los servers
  *   pm2 logs                                # Ver logs en vivo
  *   pm2 monit                               # Ver monitor
  *   pm2 status                              # Ver status
  *   pm2 restart all                         # Reiniciar todos
  *   pm2 delete all                          # Parar todos
- *   pm2 start ecosystem.config.cjs --only main-app  # Iniciar solo uno
+ *   pm2 start ecosystem.config.js --only main-app  # Iniciar solo uno
  */
 
-module.exports = {
+export default {
   apps: [
     // ==========================================
     // MAIN APP (Puerto 3000)
@@ -21,7 +21,7 @@ module.exports = {
       script: 'src/apps/main/server.js',
       instances: 'max',
       exec_mode: 'cluster',
-      cwd: '/var/www/black-polar',
+      cwd: '/var/www/blackpolar',
       env: {
         NODE_ENV: 'production',
         MAIN_PORT: 3000,
@@ -43,7 +43,7 @@ module.exports = {
       script: 'src/apps/portfolios/server.js',
       instances: 'max',
       exec_mode: 'cluster',
-      cwd: '/var/www/black-polar',
+      cwd: '/var/www/blackpolar',
       env: {
         NODE_ENV: 'production',
         PORTFOLIOS_PORT: 4000,
@@ -65,7 +65,7 @@ module.exports = {
       script: 'src/apps/tlm/server.js',
       instances: 'max',
       exec_mode: 'cluster',
-      cwd: '/var/www/black-polar',
+      cwd: '/var/www/blackpolar',
       env: {
         NODE_ENV: 'production',
         TLM_PORT: 5000,
@@ -91,7 +91,7 @@ module.exports = {
       repo: 'git@github.com:cosmiclovesleepx/blackpolar.git',
       path: '/var/www/blackpolar',
       'post-deploy':
-        'npm ci --omit=dev && mkdir -p logs && pm2 reload ecosystem.config.cjs --env production',
+        'npm ci --omit=dev && mkdir -p logs && pm2 reload ecosystem.config.js --env production',
       'post-setup':
         'npm ci --omit=dev && mkdir -p logs',
     },
