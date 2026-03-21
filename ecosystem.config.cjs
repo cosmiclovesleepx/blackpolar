@@ -1,21 +1,18 @@
 /**
- * PM2 Ecosystem Configuration (ES Module)
+ * PM2 Ecosystem Configuration (CommonJS)
  *
  * Uso:
- *   pm2 start ecosystem.config.js          # Iniciar todos los servers
- *   pm2 logs                                # Ver logs en vivo
- *   pm2 monit                               # Ver monitor
- *   pm2 status                              # Ver status
- *   pm2 restart all                         # Reiniciar todos
- *   pm2 delete all                          # Parar todos
- *   pm2 start ecosystem.config.js --only main-app  # Iniciar solo uno
+ *   pm2 start ecosystem.config.cjs          # Iniciar todos los servers
+ *   pm2 logs
+ *   pm2 monit
+ *   pm2 status
+ *   pm2 restart all
+ *   pm2 delete all
+ *   pm2 start ecosystem.config.cjs --only main-app
  */
 
-export default {
+module.exports = {
   apps: [
-    // ==========================================
-    // MAIN APP (Puerto 3000)
-    // ==========================================
     {
       name: 'main-app',
       script: 'src/apps/main/server.js',
@@ -34,10 +31,6 @@ export default {
       autorestart: true,
       watch: false,
     },
-
-    // ==========================================
-    // PORTFOLIOS APP (Puerto 4000)
-    // ==========================================
     {
       name: 'portfolios-app',
       script: 'src/apps/portfolios/server.js',
@@ -56,10 +49,6 @@ export default {
       autorestart: true,
       watch: false,
     },
-
-    // ==========================================
-    // TLM APP (Puerto 5000)
-    // ==========================================
     {
       name: 'tlm-app',
       script: 'src/apps/tlm/server.js',
@@ -80,9 +69,6 @@ export default {
     },
   ],
 
-  // ==========================================
-  // DEPLOY (OPCIONAL)
-  // ==========================================
   deploy: {
     production: {
       user: 'ubuntu',
@@ -91,7 +77,7 @@ export default {
       repo: 'git@github.com:cosmiclovesleepx/blackpolar.git',
       path: '/var/www/blackpolar',
       'post-deploy':
-        'npm ci --omit=dev && mkdir -p logs && pm2 reload ecosystem.config.js --env production',
+        'npm ci --omit=dev && mkdir -p logs && pm2 reload ecosystem.config.cjs --env production',
       'post-setup':
         'npm ci --omit=dev && mkdir -p logs',
     },
