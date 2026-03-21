@@ -1,0 +1,40 @@
+/**
+ * Global Styles
+ * Archivo principal de estilos compartidos para todas las aplicaciones
+ * Utiliza Tailwind CSS con capas personalizadas
+ */
+
+/* ────────────────────────────────────────────────────────────────── */
+/* TAILWIND DIRECTIVES */
+/* ────────────────────────────────────────────────────────────────── */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ────────────────────────────────────────────────────────────────── */
+/* CUSTOM BASE LAYER - Estilos base globales */
+/* ────────────────────────────────────────────────────────────────── */
+
+@layer base {
+  /* Estilos base globales aquí si es necesario */
+  /* Los estilos específicos por app se mantienen en sus carpetas locales */
+}
+
+/* ────────────────────────────────────────────────────────────────── */
+/* CUSTOM COMPONENTS LAYER - Componentes reutilizables */
+/* ────────────────────────────────────────────────────────────────── */
+
+@layer components {
+  /* Componentes globales compartidos entre apps */
+  /* Los componentes específicos por app se mantienen en sus carpetas locales */
+}
+
+/* ────────────────────────────────────────────────────────────────── */
+/* CUSTOM UTILITIES LAYER - Utilidades personalizadas */
+/* ────────────────────────────────────────────────────────────────── */
+
+@layer utilities {
+  /* Utilidades globales personalizadas aquí */
+  /* Las utilidades específicas por app se mantienen en sus carpetas locales */
+}

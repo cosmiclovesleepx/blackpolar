@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLM App - Black Polar</title>
+    <link rel="stylesheet" href="/styles/output.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>🚀 TLM App</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/api/v1">API</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Total Learning Management</h1>
+            <p>Aplicación TLM ejecutándose en puerto 5000</p>
+        </section>
+
+        <section class="info-card">
+            <h2>📚 Estado de la Aplicación</h2>
+            <div class="status-grid">
+                <div class="status-item">
+                    <h3>Puerto</h3>
+                    <p>5000</p>
+                </div>
+                <div class="status-item">
+                    <h3>Ambiente</h3>
+                    <p><%= process.env.NODE_ENV || 'development' %></p>
+                </div>
+                <div class="status-item">
+                    <h3>Hora</h3>
+                    <p><%= new Date().toLocaleTimeString('es-ES') %></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-card">
+            <h2>🎓 Servicios Disponibles</h2>
+            <ul class="endpoint-list">
+                <li>
+                    <strong>Cursos</strong><br>
+                    <small>Gestión de cursos y contenido educativo</small>
+                </li>
+                <li>
+                    <strong>Usuarios</strong><br>
+                    <small>Gestión de estudiantes y profesores</small>
+                </li>
+                <li>
+                    <strong>Analítica</strong><br>
+                    <small>Seguimiento de progreso y reportes</small>
+                </li>
+            </ul>
+        </section>
+
+        <section class="info-card">
+            <h2>🔗 Endpoints Disponibles</h2>
+            <ul class="endpoint-list">
+                <li><code>GET /</code> - Esta página</li>
+                <li><code>GET /health</code> - Health check</li>
+                <li><code>GET /api/v1</code> - API v1</li>
+                <li><code>GET /services</code> - Servicios disponibles</li>
+            </ul>
+        </section>
+
+        <section class="info-card">
+            <h2>🌐 Navega a Otras Apps</h2>
+            <ul class="app-links">
+                <li>
+                    <strong>App Principal</strong><br>
+                    <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>
+                </li>
+                <li>
+                    <strong>Portfolios</strong><br>
+                    <a href="http://localhost:4000" target="_blank">http://localhost:4000</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Black Polar. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>

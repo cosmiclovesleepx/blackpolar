@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Black Polar — Technology Services</title>
+  <link rel="icon" href="/public/assets/image/favicon.ico" type="image/x-icon">
+
+  <meta name="description" content="Black Polar is a technology services firm specializing in mission-critical infrastructure, threat defense, and digital transformation.">
+  <meta name="keywords"    content="technology, services, cybersecurity, systems administration, consulting">
+  <meta name="author"      content="BLACK POLAR GROUP">
+
+  <meta property="og:title"       content="Black Polar">
+  <meta property="og:description" content="Black Polar — precision-engineered technology services.">
+  <meta property="og:image"       content="/public/assets/image/preview.png">
+  <meta property="og:type"        content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,200;0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            body:    ['"DM Sans"', 'sans-serif'],
+            mono:    ['"Space Mono"', 'monospace'],
+          },
+          colors: {
+            polar: {
+              black:  '#080808',
+              white:  '#f5f5f0',
+              gray:   '#1a1a1a',
+              mid:    '#2e2e2e',
+              muted:  '#888888',
+              accent: '#e8e8e0',
+            }
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="/public/css/index.css"/>
+</head>
+
+<body>
+
+
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<header id="site-header">
+  <div class="logo-mark">
+    <img src="/public/assets/image/blackpolar1.png" alt="Logo" class="logo-img"/>
+    BLACK POLAR
+  </div>
+
+  <nav class="navbar-desktop flex items-center gap-10">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button id="mobile-menu-toggle" class="mobile-menu-btn" title="Toggle Menu"
+    aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span class="hamburger-line line1"></span>
+    <span class="hamburger-line line2"></span>
+    <span class="hamburger-line line3"></span>
+  </button>
+
+  <button id="admin-btn"
+    class="w-9 h-9 border border-white/10 flex items-center justify-center hover:border-white/40 transition-colors duration-200 admin-btn"
+    title="Admin">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(245,245,240,0.5)" stroke-width="1.5">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+      <circle cx="12" cy="7" r="4"/>
+    </svg>
+  </button>
+</header>
+
+<nav id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <a href="#about"     class="mobile-nav-link">About</a>
+  <a href="#services"  class="mobile-nav-link">Services</a>
+  <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+  <a href="#contact"   class="mobile-nav-link">Contact</a>
+</nav>
+
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero" id="home">
+  <img
+    class="hero-gif"
+    src="https://i.pinimg.com/originals/34/c5/99/34c59993144effa06ee12c8fde3c386c.gif"
+    alt="" role="presentation" fetchpriority="high"
+  />
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Black<span>Polar</span>
+    </h1>
+    <p class="hero-sub">
+      Precision-engineered technology services for the infrastructure of tomorrow.
+    </p>
+    <a href="#services" class="hero-cta">
+      Explore Services
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ MARQUEE ═══════════════════════════ -->
+<div class="marquee-band">
+  <div class="marquee-track">
+    <span class="marquee-item">Technology Services</span>
+    <span class="marquee-sep">◆</span>
+    <span class="marquee-item">Cybersecurity</span>
+    <span class="marquee-sep">◆</span>
+    <span class="marquee-item">Systems Administration</span>
+    <span class="marquee-sep">◆</span>
+    <span class="marquee-item">Strategic Consulting</span>
+    <span class="marquee-sep">◆</span>
+    <span class="marquee-item">Cloud Infrastructure</span>
+    <span class="marquee-sep">◆</span>
+    <span class="marquee-item">Network Engineering</span>
+    <span class="marquee-sep">◆</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">Technology Services</span>
+    <span class="marquee-sep">◆</span>
+    <span class="marquee-item">Cybersecurity</span>
+    <span class="marquee-sep">◆</span>
+    <span class="marquee-item">Systems Administration</span>
+    <span class="marquee-sep">◆</span>
+    <span class="marquee-item">Strategic Consulting</span>
+    <span class="marquee-sep">◆</span>
+    <span class="marquee-item">Cloud Infrastructure</span>
+    <span class="marquee-sep">◆</span>
+    <span class="marquee-item">Network Engineering</span>
+    <span class="marquee-sep">◆</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+<section id="about" class="about-section">
+  <div class="about-inner">
+
+    <!-- Left: text -->
+    <div class="about-text">
+      <p class="section-label reveal">001 — About Us</p>
+      <div class="section-rule reveal reveal-delay-1"></div>
+      <h2 class="section-title mt-4 reveal reveal-delay-1">
+        Built for<br/>
+        <span class="text-outline">Complexity.</span>
+      </h2>
+      <p class="about-body reveal reveal-delay-2">
+        Black Polar is a technology services firm specializing in mission-critical infrastructure, threat defense, and digital transformation. We embed with your organization to architect resilient, scalable systems built for the demands of the modern enterprise.
+      </p>
+      <p class="about-body reveal reveal-delay-2" style="margin-top:16px;">
+        Our multidisciplinary team brings deep expertise across engineering, security, and operations — delivering clarity where others find chaos.
+      </p>
+      <div class="about-actions reveal reveal-delay-3">
+        <a href="#contact" class="btn-primary">Work With Us</a>
+        <a href="#portfolio" class="btn-ghost">
+          View Work
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: image card -->
+    <div class="about-visual reveal reveal-delay-2">
+      <div class="about-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop"
+          alt="Technology infrastructure"
+          loading="lazy"
+          class="about-img"
+        />
+        <!-- Status bar -->
+        <div class="about-status-bar">
+          <div>
+            <div class="about-status-label">System Status</div>
+            <div class="about-status-value">All Systems Operational</div>
+          </div>
+          <div class="status-dot"></div>
+        </div>
+      </div>
+      <!-- Corner accents -->
+      <div class="corner-tl"></div>
+      <div class="corner-br"></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ STATS ═══════════════════════════ -->
+<div class="stats-band">
+  <div class="stats-inner">
+    <div class="stat-item reveal">
+      <div class="stat-val" data-count="200" data-suffix="+">0</div>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal reveal-delay-1">
+      <div class="stat-val" data-count="98" data-suffix="%">0</div>
+      <div class="stat-label">Client Retention</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal reveal-delay-2">
+      <div class="stat-val" data-count="15" data-suffix="+">0</div>
+      <div class="stat-label">Years Combined Exp.</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal reveal-delay-3">
+      <div class="stat-val" data-count="40" data-suffix="+">0</div>
+      <div class="stat-label">Enterprise Clients</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
+<section id="services" class="services-section">
+  <div class="services-inner">
+
+    <div class="services-header">
+      <div>
+        <p class="section-label reveal">002 — What We Do</p>
+        <div class="section-rule reveal reveal-delay-1"></div>
+        <h2 class="section-title reveal reveal-delay-1">Services</h2>
+      </div>
+      <p class="services-desc reveal reveal-delay-2">
+        Comprehensive technology solutions tailored to the operational demands of your organization.
+      </p>
+    </div>
+
+    <!-- Rendered by main.js -->
+    <div class="services-grid" id="services-grid"></div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ PORTFOLIO ═══════════════════════════ -->
+<section id="portfolio" class="portfolio-section">
+  <div class="portfolio-inner">
+
+    <div class="portfolio-header">
+      <p class="section-label reveal">003 — Our Work</p>
+      <div class="section-rule reveal reveal-delay-1"></div>
+      <h2 class="section-title reveal reveal-delay-1">Portfolio</h2>
+    </div>
+
+    <!-- Rendered by main.js -->
+    <div class="portfolio-grid" id="portfolio-grid"></div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+
+    <!-- Left: info -->
+    <div class="contact-info">
+      <p class="section-label reveal">004 — Get In Touch</p>
+      <div class="section-rule reveal reveal-delay-1"></div>
+      <h2 class="section-title reveal reveal-delay-1">
+        Let's Build<br/>Something.
+      </h2>
+      <p class="contact-body reveal reveal-delay-2">
+        Whether you need a full infrastructure overhaul or specialized consulting, we're ready to engage. Reach out and we'll respond within 24 hours.
+      </p>
+
+      <div class="contact-details reveal reveal-delay-3">
+        <div class="contact-detail-row">
+          <div class="contact-icon-box">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(245,245,240,0.5)" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <a href="mailto:contact@blackpolar.io" class="contact-detail-text">
+            contact@blackpolar.io
+          </a>
+        </div>
+        <div class="contact-detail-row">
+          <div class="contact-icon-box">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(245,245,240,0.5)" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <span class="contact-detail-text">Panama City, República de Panamá</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: form -->
+    <div class="reveal reveal-delay-2">
+      <form id="contact-form" class="contact-form" novalidate>
+
+        <div class="form-row-2">
+          <div class="form-field">
+            <label class="contact-label" for="f-name">Full Name</label>
+            <input id="f-name" name="name" type="text" class="contact-input" placeholder="John Doe" required/>
+          </div>
+          <div class="form-field">
+            <label class="contact-label" for="f-email">Email Address</label>
+            <input id="f-email" name="email" type="email" class="contact-input" placeholder="john@company.com" required/>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="contact-label" for="f-service">Service Interest</label>
+          <select id="f-service" name="service" class="contact-input contact-select">
+            <option value="">Select a service…</option>
+            <option value="technology">Technology Services</option>
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="sysadmin">Systems Administration</option>
+            <option value="consulting">Strategic Consulting</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label class="contact-label" for="f-message">Message</label>
+          <textarea id="f-message" name="message" class="contact-input contact-textarea" rows="4" placeholder="Describe your project or inquiry…" required></textarea>
+        </div>
+
+        <button type="submit" id="form-submit" class="btn-primary btn-full">
+          Send Message
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="logo-mark">
+      <img src="/public/assets/image/blackpolar1.png" alt="Logo" class="logo-img"/>
+      BLACK POLAR
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#about"     class="footer-link">About</a>
+      <a href="#services"  class="footer-link">Services</a>
+      <a href="#portfolio" class="footer-link">Portfolio</a>
+      <a href="#contact"   class="footer-link">Contact</a>
+    </nav>
+    <a href="#contact" class="btn-primary" style="font-size:0.62rem;padding:11px 24px;">Get Started</a>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© <span id="footer-year"></span> BLACK POLAR. ALL RIGHTS RESERVED.</p>
+    <div class="footer-legal">
+      <a href="#" class="footer-link">Privacy Policy</a>
+      <a href="#" class="footer-link">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/public/js/main.js" defer></script>
+</body>
+</html>

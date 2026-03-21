@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Black Polar — Portfolio</title>
+  <link rel="icon" href="/public/assets/image/favicon.ico" type="image/x-icon"/>
+
+  <meta name="description" content="Black Polar portfolio — infrastructure projects, security engagements, and consulting mandates.">
+  <meta name="author" content="BLACK POLAR GROUP">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@200;300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            body:    ['"DM Sans"', 'sans-serif'],
+            mono:    ['"Space Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="/public/css/index.css"/>
+</head>
+<body>
+
+<!-- ══ MOBILE NAV ══════════════════════════════════════════ -->
+<div id="mob-nav" aria-hidden="true">
+  <button id="mob-close" aria-label="Close menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M18 6 6 18M6 6l12 12"/>
+    </svg>
+  </button>
+  <a href="#projects">Projects</a>
+  <a href="#team">Team</a>
+  <a href="#clients">Clients</a>
+  <a href="#showcase">Showcase</a>
+  <a href="/" class="mob-home">← Home</a>
+</div>
+
+
+<!-- ══ HEADER ══════════════════════════════════════════════ -->
+<header id="hdr">
+  <div class="hdr-inner">
+
+    <a href="/" class="hdr-logo" aria-label="Black Polar Home">
+      <div class="hdr-logo-sq"><span></span></div>
+      <span class="hdr-logo-name">BLACK POLAR</span>
+    </a>
+
+    <div class="hdr-center">
+      <div class="dot-live"></div>
+      <span class="mono-label">portfolio.v2026</span>
+    </div>
+
+    <nav class="hdr-nav" aria-label="Portfolio navigation">
+      <a href="#projects" class="mono-label nav-link">Projects</a>
+      <a href="#team"     class="mono-label nav-link">Team</a>
+      <a href="#clients"  class="mono-label nav-link">Clients</a>
+      <a href="#showcase" class="mono-label nav-link">Showcase</a>
+      <a href="/" class="mono-label nav-link nav-home">← Home</a>
+    </nav>
+
+    <button id="mob-toggle" class="hdr-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span style="width:13px"></span>
+    </button>
+
+  </div>
+</header>
+
+
+<!-- ══ HERO ════════════════════════════════════════════════ -->
+<section class="hero-section" aria-label="Portfolio hero">
+
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="grid-cross" style="top:120px;left:80px;"  aria-hidden="true"></div>
+  <div class="grid-cross" style="top:120px;right:80px;" aria-hidden="true"></div>
+  <div class="grid-cross" style="bottom:80px;left:80px;"  aria-hidden="true"></div>
+  <div class="grid-cross" style="bottom:80px;right:80px;" aria-hidden="true"></div>
+
+  <div class="hero-content">
+
+    <div class="hero-eyebrow hero-el" style="animation-delay:.15s">
+      <div class="dot-live"></div>
+      <span class="mono-label">BP-PORTFOLIO / CASE_STUDIES / ALL</span>
+    </div>
+
+    <h1 class="hero-title hero-el" style="animation-delay:.3s">
+      WORK<br/>
+      <span class="hero-title-outline">ARCHIVE</span>
+    </h1>
+
+    <div class="hero-sub-row hero-el" style="animation-delay:.55s">
+      <p class="hero-sub-text">
+        A complete record of infrastructure projects, security engagements, system deployments, and consulting mandates delivered since 2025.
+      </p>
+      <div class="hero-counters">
+        <div class="hero-counter-item">
+          <div class="count-up" data-count="3" data-suffix="">0</div>
+          <div class="mono-label">Total Projects</div>
+        </div>
+        <div class="hero-counter-div" aria-hidden="true"></div>
+        <div class="hero-counter-item">
+          <div class="count-up" data-count="6" data-suffix="">0</div>
+          <div class="mono-label">Years Active</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-terminal hero-el" style="animation-delay:.75s">
+      <div class="terminal">
+        <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd"> bp --list-projects --filter=all --sort=date</span></div>
+        <div class="term-line"><span class="term-out">Loading <span class="term-hl">3 projects</span> across <span class="term-hl">3 domains</span>...</span></div>
+        <div class="term-line"><span class="term-out">Status: <span class="term-ok">● OPERATIONAL</span></span></div>
+        <div class="term-line"><span class="term-out">Last updated: <span class="term-hl">2026-03-21</span></span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hero-scroll hero-el" style="animation-delay:1.1s" aria-hidden="true">
+    <span class="mono-label">scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+
+</section>
+
+<div class="sec-rule"></div>
+
+
+<!-- ══ STATS ROW ════════════════════════════════════════════ -->
+<section class="stats-row" aria-label="Domain statistics">
+  <div class="stats-row-inner">
+
+    <div class="stat-box rv">
+      <div class="mono-label stat-box-label">Cybersecurity</div>
+     
+    </div>
+
+    <div class="stat-box rv d1">
+      <div class="mono-label stat-box-label">Infrastructure</div>
+      
+    </div>
+
+    <div class="stat-box rv d2">
+      <div class="mono-label stat-box-label">Sysadmin</div>
+     
+    </div>
+
+    <div class="stat-box rv d3">
+      <div class="mono-label stat-box-label">Consulting</div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="sec-rule"></div>
+
+
+<!-- ══ PROJECTS ═════════════════════════════════════════════ -->
+<section id="projects" class="section-pad">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="mono-label rv">001 — Project Registry</div>
+        <h2 class="section-title rv d1">All Projects</h2>
+      </div>
+      <div class="filter-tabs rv d2" role="group" aria-label="Filter projects">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="infrastructure">Infra</button>
+        <button class="filter-tab" data-filter="consulting">Consulting</button>
+      </div>
+    </div>
+
+    <!-- Column headers -->
+    <div class="proj-col-header rv d2">
+      <div></div>
+      <div class="mono-label">Project / Client</div>
+      <div class="mono-label">Status</div>
+    </div>
+
+    <!-- Project rows — 3 real projects -->
+    <div id="proj-list">
+
+      <div class="proj-row rv" data-cat="infrastructure">
+        <span class="proj-num">01</span>
+        <div class="proj-inner">
+          <span class="proj-title">Solvijaya — Infrastructure</span>
+          <div class="proj-meta">
+            <span class="proj-tag">Infrastructure</span>
+            <span class="proj-year">2025</span>
+          </div>
+        </div>
+        <div class="proj-right">
+          <span class="proj-status status-delivered">Delivered</span>
+          <svg class="proj-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+
+      <div class="proj-row rv d1" data-cat="infrastructure consulting">
+        <span class="proj-num">02</span>
+        <div class="proj-inner">
+          <span class="proj-title">Seminsa — Infrastructure · Consulting</span>
+          <div class="proj-meta">
+            <span class="proj-tag">Infrastructure</span>
+            <span class="proj-tag">Consulting</span>
+            <span class="proj-year">2025</span>
+          </div>
+        </div>
+        <div class="proj-right">
+          <span class="proj-status status-delivered">Delivered</span>
+          <svg class="proj-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+
+      <div class="proj-row rv d2" data-cat="consulting">
+        <span class="proj-num">03</span>
+        <div class="proj-inner">
+          <span class="proj-title">Shark Optimization — Consulting · Cloud Migration</span>
+          <div class="proj-meta">
+            <span class="proj-tag">Consulting</span>
+            <span class="proj-tag">Cloud Migration</span>
+            <span class="proj-year">2026</span>
+          </div>
+        </div>
+        <div class="proj-right">
+          <span class="proj-status status-ongoing">Ongoing</span>
+          <svg class="proj-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="proj-footer rv">
+      <span class="mono-label">Showing 3 of 3</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="sec-rule"></div>
+
+
+<!-- ══ TEAM ═════════════════════════════════════════════════ -->
+<section id="team" class="section-pad section-dark" aria-label="Team">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="mono-label rv">002 — Team Registry</div>
+        <h2 class="section-title rv d1">The Operators</h2>
+      </div>
+      <p class="section-sub rv d2">
+        A lean, specialized team with deep field experience across every domain we operate in.
+      </p>
+    </div>
+
+    <!-- 3 members, 2-column layout centered -->
+    <div class="team-grid" id="team-grid">
+      <!-- Rendered by index.js -->
+    </div>
+
+  </div>
+</section>
+
+<div class="sec-rule"></div>
+
+
+<!-- ══ CLIENTS ══════════════════════════════════════════════ -->
+<section id="clients" class="section-pad" aria-label="Clients">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="mono-label rv">003 — Client Roster</div>
+        <h2 class="section-title rv d1">Trusted By</h2>
+      </div>
+    </div>
+
+    <!-- Empty — to be populated later -->
+    <div class="clients-placeholder rv">
+      <div class="dot-live" aria-hidden="true"></div>
+      <span class="mono-label">Client information coming soon.</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="sec-rule"></div>
+
+
+<!-- ══ SHOWCASE ═════════════════════════════════════════════ -->
+<section id="showcase" class="section-pad section-dark" aria-label="Showcase">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="mono-label rv">004 — Deep Dives</div>
+        <h2 class="section-title rv d1">Showcase</h2>
+      </div>
+      <p class="section-sub rv d2">
+        Selected case studies with full technical scope, tooling, and outcome metrics.
+      </p>
+    </div>
+
+    <!-- Empty — to be populated later -->
+    <div class="showcase-placeholder rv">
+      <div class="dot-live" aria-hidden="true"></div>
+      <span class="mono-label">Case studies coming soon.</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="sec-rule"></div>
+
+
+<!-- ══ TECH STACK ════════════════════════════════════════════ -->
+<section class="section-pad-sm" aria-label="Technology stack">
+  <div class="container">
+
+    <div class="mono-label rv" style="margin-bottom:28px;">005 — Technology Stack</div>
+
+    <div class="stack-grid rv">
+      <div class="stack-col">
+        <div class="mono-label stack-col-title" style="color:var(--green);">Cloud Platforms</div>
+        <div class="badge-group">
+          <span class="tech-badge">AWS</span>
+          <span class="tech-badge">Azure</span>
+          <span class="tech-badge">GCP</span>
+          <span class="tech-badge">Oracle Cloud</span>
+          <span class="tech-badge">Cloudflare</span>
+        </div>
+      </div>
+      <div class="stack-col">
+        <div class="mono-label stack-col-title">Security Tools</div>
+        <div class="badge-group">
+          <span class="tech-badge">CrowdStrike</span>
+          <span class="tech-badge">Splunk</span>
+          <span class="tech-badge">Palo Alto</span>
+          <span class="tech-badge">Nessus</span>
+          <span class="tech-badge">Burp Suite</span>
+        </div>
+      </div>
+      <div class="stack-col">
+        <div class="mono-label stack-col-title">Infrastructure</div>
+        <div class="badge-group">
+          <span class="tech-badge">Kubernetes</span>
+          <span class="tech-badge">Terraform</span>
+          <span class="tech-badge">Ansible</span>
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">HAProxy</span>
+        </div>
+      </div>
+      <div class="stack-col">
+        <div class="mono-label stack-col-title">Monitoring</div>
+        <div class="badge-group">
+          <span class="tech-badge">Prometheus</span>
+          <span class="tech-badge">Grafana</span>
+          <span class="tech-badge">Datadog</span>
+          <span class="tech-badge">Zabbix</span>
+          <span class="tech-badge">PagerDuty</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+
+    <div class="footer-logo">
+      <div class="hdr-logo-sq"><span></span></div>
+      <span class="hdr-logo-name">BLACK POLAR</span>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#projects" class="mono-label nav-link">Projects</a>
+      <a href="#team"     class="mono-label nav-link">Team</a>
+      <a href="#clients"  class="mono-label nav-link">Clients</a>
+      <a href="#showcase" class="mono-label nav-link">Showcase</a>
+      <a href="/"         class="mono-label nav-link">← Main Site</a>
+    </nav>
+
+    <p class="mono-label footer-copy">© <span id="yr"></span> Black Polar</p>
+
+  </div>
+</footer>
+
+
+<script src="/public/js/index.js" defer></script>
+</body>
+</html>
