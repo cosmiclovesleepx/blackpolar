@@ -20,8 +20,8 @@ module.exports = {
       exec_mode: 'cluster',
       cwd: '/var/www/blackpolar',
       env: {
-        NODE_ENV: 'production',
-        MAIN_PORT: 3000,
+            NODE_ENV: 'production',
+            MAIN_PORT: 3000,
       },
       error_file: './logs/main-error.log',
       out_file: './logs/main-out.log',
@@ -68,6 +68,8 @@ module.exports = {
       watch: false,
     },
   ],
+
+  
 
   deploy: {
     production: {

@@ -34,9 +34,7 @@ export const env = {
   PORTFOLIOS_PORT: num('PORTFOLIOS_PORT', 4000),
   TLM_PORT:        num('TLM_PORT',        5000),
 
-  MONGODB_URI: str('MONGODB_URI', ''),
-  JWT_SECRET:  str('JWT_SECRET',  'dev-secret-CHANGE-IN-PROD'),
-  JWT_EXPIRE:  str('JWT_EXPIRE',  '7d'),
+  MONGODB_URI: str('MONGODB_URI', 'mongodb://obsidian-db-admin:e2rGo5IehihqGW5E@ac-vfspmaw-shard-00-00.aowmsyz.mongodb.net:27017,ac-vfspmaw-shard-00-01.aowmsyz.mongodb.net:27017,ac-vfspmaw-shard-00-02.aowmsyz.mongodb.net:27017/?ssl=true&replicaSet=atlas-jeb6nv-shard-0&authSource=admin&appName=Obsidian-DB-1'),
 
   cors: {
     origins: process.env.CORS_ORIGIN ? list('CORS_ORIGIN') : '*',
@@ -52,12 +50,9 @@ export const env = {
 
 export const validateEnv = () => {
   if (!env.isProd) return;
-  const required = ['MONGODB_URI', 'JWT_SECRET'];
+  const required = ['MONGODB_URI'];
   const missing  = required.filter(k => !process.env[k]);
   if (missing.length > 0) {
     throw new Error(`[ENV] Faltan variables requeridas: ${missing.join(', ')}`);
-  }
-  if (env.JWT_SECRET === 'dev-secret-CHANGE-IN-PROD') {
-    throw new Error('[ENV] JWT_SECRET no puede ser el valor por defecto en producción.');
   }
 };
