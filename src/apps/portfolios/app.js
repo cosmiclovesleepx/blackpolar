@@ -33,7 +33,35 @@ const app = express();
 app.set('trust proxy', 1);
 
 // ── 2. Seguridad ─────────────────────────────────────────────────
-app.use(helmet({ contentSecurityPolicy: env.isDev ? false : undefined }));
+app.use( helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+
+        scriptSrc: ["'self'"],
+
+        styleSrc: [
+          "'self'",
+          "https://fonts.googleapis.com"
+        ],
+
+        fontSrc: [
+          "'self'",
+          "https://fonts.gstatic.com"
+        ],
+
+        imgSrc: [
+          "'self'",
+          "data:",
+          "https://images.unsplash.com",
+          "https://i.pinimg.com"
+        ],
+
+        connectSrc: ["'self'"],
+      }
+    }
+  })
+);
 
 // ── 3. Request ID (trazabilidad) ─────────────────────────────────
 app.use(requestId);
