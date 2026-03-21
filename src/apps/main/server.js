@@ -4,20 +4,12 @@
  */
 
 import { env, validateEnv } from '../../shared/config/env.js';
-import { connectDB }        from '../../shared/config/db.js';
 import { logger }           from '../../shared/utils/logger.js';
 import app                  from './app.js';
 
 const startServer = async () => {
   try {
     validateEnv();
-
-    // DB es opcional en dev si MONGODB_URI no está definida
-    if (env.MONGODB_URI) {
-      await connectDB();
-    } else {
-      logger.warn('MONGODB_URI no definida — arrancando sin base de datos.');
-    }
 
     const server = app.listen(env.MAIN_PORT, () => {
       logger.success(`MAIN → http://localhost:${env.MAIN_PORT}  [${env.NODE_ENV}]`);

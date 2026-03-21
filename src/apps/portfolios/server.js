@@ -3,15 +3,12 @@
  */
 
 import { env, validateEnv } from '../../shared/config/env.js';
-import { connectDB }        from '../../shared/config/db.js';
 import { logger }           from '../../shared/utils/logger.js';
 import app                  from './app.js';
 
 const startServer = async () => {
   try {
     validateEnv();
-    if (env.MONGODB_URI) await connectDB();
-    else logger.warn('MONGODB_URI no definida — arrancando sin base de datos.');
 
     const server = app.listen(env.PORTFOLIOS_PORT, () => {
       logger.success(`PORTFOLIOS → http://localhost:${env.PORTFOLIOS_PORT}  [${env.NODE_ENV}]`);
