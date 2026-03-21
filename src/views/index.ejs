@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Metatags -->
+  <title>Black Polar</title>
+  <link rel="icon" href="/public/assets/image/favicon.ico" type="image/x-icon">
+
+   <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Black Polar is a technology services firm specializing in mission-critical infrastructure, threat defense, and digital transformation. We embed with your organization to architect resilient, scalable systems built for the demands of the modern enterprise. Our multidisciplinary team brings deep expertise across engineering, security, and operations — delivering clarity where others find chaos.">
+  <meta name="keywords" content="technology, services, cybersecurity, systems administration, consulting">
+  <meta name="author" content="BLACK POLAR GROUP">
+
+  <!-- Open Graph (for social media) -->
+  <meta property="og:title" content="Black Polar">
+  <meta property="og:description" content="Black Polar is a technology services firm specializing in mission-critical infrastructure, threat defense, and digital transformation. We embed with your organization to architect resilient, scalable systems built for the demands of the modern enterprise. Our multidisciplinary team brings deep expertise across engineering, security, and operations — delivering clarity where others find chaos.">
+  <meta property="og:image" content="/public/assets/images/preview.png">
+  <meta property="og:type" content="website">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="/public/css/index.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+          colors: {
+            polar: {
+              black: '#080808',
+              white: '#f5f5f0',
+              gray: '#1a1a1a',
+              mid: '#2e2e2e',
+              muted: '#888888',
+              accent: '#e8e8e0',
+            }
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.8s ease forwards',
+            'fade-in': 'fadeIn 1s ease forwards',
+            'line-grow': 'lineGrow 1.2s ease forwards',
+            'counter': 'counter 2s ease forwards',
+          }
+        }
+      }
+    }
+  </script>
+
+ 
+
+</head>
+
+<body>
+
+
+
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<header id="site-header">
+  <div class="logo-mark">
+      <img src="/public/assets/image/blackpolar1.png" alt="Logo" class="logo-img" />
+        BLACK POLAR
+  </div>
+
+  <!-- Desktop Navigation -->
+  <nav class="navbar-desktop flex items-center gap-10">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Mobile Menu Button (Hamburger) -->
+  <button id="mobile-menu-toggle" class="mobile-menu-btn" title="Toggle Menu">
+    <span class="hamburger-line line1"></span>
+    <span class="hamburger-line line2"></span>
+    <span class="hamburger-line line3"></span>
+  </button>
+
+  <!-- Admin Button -->
+  <button
+    onclick="alert('Admin login')"
+    style="cursor:none"
+    class="w-9 h-9 border border-white/10 flex items-center justify-center hover:border-white/40 transition-colors duration-200 admin-btn"
+    title="Admin"
+  >
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(245,245,240,0.5)" stroke-width="1.5">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+      <circle cx="12" cy="7" r="4"/>
+    </svg>
+  </button>
+</header>
+
+<!-- Mobile Navigation Menu -->
+<nav id="mobile-menu" class="mobile-menu">
+  <a href="#about" class="mobile-nav-link">About</a>
+  <a href="#services" class="mobile-nav-link">Services</a>
+  <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+  <a href="#contact" class="mobile-nav-link">Contact</a>
+</nav>
+
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero" id="home">
+  <img
+    class="hero-gif"
+    src="https://i.pinimg.com/originals/34/c5/99/34c59993144effa06ee12c8fde3c386c.gif"
+    alt="Technology innovation visual"
+  />
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Black<span>Polar</span>
+    </h1>
+    <p class="hero-sub">
+      Precision-engineered technology services for everyone.
+    </p>
+    <a href="#services" class="hero-cta">
+      Explore Services
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+
+<!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+<section id="about" class="py-32 px-6 md:px-16 lg:px-24">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+    <div>
+      <p class="section-label reveal">001 — About Us</p>
+      <h2 class="section-title mt-4 reveal reveal-delay-1">
+        Built for<br/>
+        <span style="-webkit-text-stroke: 1px rgba(245,245,240,0.3); color: transparent;">
+          Complexity.
+        </span>
+      </h2>
+      <p class="mt-8 text-sm font-light leading-relaxed text-white/50 reveal reveal-delay-2" style="max-width:480px">
+        Black Polar is a technology services firm specializing in mission-critical infrastructure, threat defense, and digital transformation. We embed with your organization to architect resilient, scalable systems built for the demands of the modern enterprise.
+      </p>
+      <p class="mt-5 text-sm font-light leading-relaxed text-white/50 reveal reveal-delay-2" style="max-width:480px">
+        Our multidisciplinary team brings deep expertise across engineering, security, and operations — delivering clarity where others find chaos.
+      </p>
+      <div class="mt-10 flex items-center gap-6 reveal reveal-delay-3">
+        <a href="#contact" class="btn-primary" style="font-size:0.65rem">
+          Work With Us
+        </a>
+        <a href="#portfolio" class="footer-link flex items-center gap-2" style="color:rgba(245,245,240,0.45)">
+          View Work
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Abstract visual block -->
+    <div class="relative reveal reveal-delay-2">
+      <div style="
+        border: 1px solid rgba(245,245,240,0.07);
+        padding: 2px;
+        position: relative;
+      ">
+        <img
+          src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop"
+          alt="Technology infrastructure"
+          style="width:100%; display:block; filter:grayscale(100%) brightness(0.55) contrast(1.1); aspect-ratio:4/3; object-fit:cover;"
+        />
+        <div style="
+          position:absolute; bottom:20px; left:20px; right:20px;
+          background:rgba(8,8,8,0.85); backdrop-filter:blur(8px);
+          border:1px solid rgba(245,245,240,0.08);
+          padding:16px 20px;
+          display:flex; align-items:center; justify-content:space-between;
+        ">
+          <div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.55rem; letter-spacing:0.2em; color:rgba(245,245,240,0.3); text-transform:uppercase; margin-bottom:4px;">System Status</div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:0.1em; color:#f5f5f0;">All Systems Operational</div>
+          </div>
+          <div style="
+            width:10px; height:10px; border-radius:50%;
+            background:#f5f5f0;
+            box-shadow: 0 0 12px rgba(245,245,240,0.5);
+            animation: pulse 2s ease-in-out infinite;
+          "></div>
+        </div>
+      </div>
+      <!-- Decorative corner -->
+      <div style="
+        position:absolute; top:-12px; right:-12px;
+        width:80px; height:80px;
+        border-top:1px solid rgba(245,245,240,0.15);
+        border-right:1px solid rgba(245,245,240,0.15);
+        pointer-events:none;
+      "></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ STATS ═══════════════════════════ -->
+<div class="stats-band py-16 px-6 md:px-16 lg:px-24">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x divide-white/8">
+    <div class="text-center reveal">
+      <div class="stat-val" data-count="200">0+</div>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+    <div class="text-center reveal reveal-delay-1">
+      <div class="stat-val" data-count="98">0%</div>
+      <div class="stat-label">Client Retention</div>
+    </div>
+    <div class="text-center reveal reveal-delay-2">
+      <div class="stat-val" data-count="15">0+</div>
+      <div class="stat-label">Years Combined Exp.</div>
+    </div>
+    <div class="text-center reveal reveal-delay-3">
+      <div class="stat-val" data-count="40">0+</div>
+      <div class="stat-label">Enterprise Clients</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
+<section id="services" class="py-32 px-6 md:px-16 lg:px-24">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-8">
+      <div>
+        <p class="section-label reveal">002 — What We Do</p>
+        <h2 class="section-title mt-4 reveal reveal-delay-1">Services</h2>
+      </div>
+      <p class="text-sm font-light text-white/40 md:max-w-xs leading-relaxed reveal reveal-delay-2">
+        Comprehensive technology solutions tailored to the operational demands of your organization.
+      </p>
+    </div>
+
+    <!-- Services Grid (rendered via JS template) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5" id="services-grid">
+      <!-- Injected by JS -->
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ PORTFOLIO ═══════════════════════════ -->
+<section id="portfolio" class="py-32 px-6 md:px-16 lg:px-24">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="mb-16">
+      <p class="section-label reveal">003 — Our Work</p>
+      <h2 class="section-title mt-4 reveal reveal-delay-1">Portfolio</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-px bg-white/5" id="portfolio-grid">
+      <!-- Injected by JS -->
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+<section id="contact" class="py-32 px-6 md:px-16 lg:px-24">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+
+    <div>
+      <p class="section-label reveal">004 — Get In Touch</p>
+      <h2 class="section-title mt-4 reveal reveal-delay-1">
+        Let's Build<br/>Something.
+      </h2>
+      <p class="mt-8 text-sm font-light leading-relaxed text-white/40 max-w-sm reveal reveal-delay-2">
+        Whether you need a full infrastructure overhaul or specialized consulting, we're ready to engage. Reach out and we'll respond within 24 hours.
+      </p>
+
+      <div class="mt-12 space-y-6 reveal reveal-delay-3">
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 border border-white/10 flex items-center justify-center flex-shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(245,245,240,0.5)" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <span style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.1em; color:rgba(245,245,240,0.45);">
+            contact@blackpolar.io
+          </span>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 border border-white/10 flex items-center justify-center flex-shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(245,245,240,0.5)" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <span style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.1em; color:rgba(245,245,240,0.45);">
+            Panama City, República de Panamá
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="reveal reveal-delay-2">
+      <div class="contact-wrapper">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <label class="contact-label">Full Name</label>
+            <input type="text" class="contact-input" placeholder="John Doe" />
+          </div>
+          <div>
+            <label class="contact-label">Email Address</label>
+            <input type="email" class="contact-input" placeholder="john@company.com" />
+          </div>
+        </div>
+        <div class="mb-8">
+          <label class="contact-label">Service Interest</label>
+          <select class="contact-input" style="appearance:none; cursor:none;">
+            <option value="" style="background:#080808;">Select a service…</option>
+            <option style="background:#080808;">Technology Services</option>
+            <option style="background:#080808;">Cybersecurity</option>
+            <option style="background:#080808;">Systems Administration</option>
+            <option style="background:#080808;">Strategic Consulting</option>
+          </select>
+        </div>
+        <div class="mb-10">
+          <label class="contact-label">Message</label>
+          <textarea class="contact-input" rows="4" placeholder="Describe your project or inquiry…" style="resize:none;"></textarea>
+        </div>
+        <button class="btn-primary w-full justify-center" onclick="handleFormSubmit(event)">
+          Send Message
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="py-12 px-6 md:px-16 lg:px-24">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="logo-mark">
+      <img src="/public/assets/image/blackpolar1.png" alt="Logo" class="logo-img" />
+        BLACK POLAR
+    </div>
+    <div class="flex items-center gap-8">
+      <a href="#about" class="footer-link">About</a>
+      <a href="#services" class="footer-link">Services</a>
+      <a href="#portfolio" class="footer-link">Portfolio</a>
+      <a href="#contact" class="footer-link">Contact</a>
+    </div>
+    <p style="font-family:'Space Mono',monospace; font-size:0.55rem; letter-spacing:0.15em; color:rgba(245,245,240,0.2);">
+      © 2026 BLACK POLAR. ALL RIGHTS RESERVED.
+    </p>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════ JAVASCRIPT ═══════════════════════════ -->
+<script>
+
+// ── EJS-style Data Model ──────────────────────────────────────────
+const data = {
+  services: [
+    {
+      number: "01",
+      name: "Technology Services",
+      description: "End-to-end IT solutions encompassing infrastructure design, deployment, and management. We architect and maintain the digital backbone that keeps your organization running without interruption.",
+      tags: ["Cloud Migration", "Infrastructure", "DevOps", "24/7 Support"],
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="service-icon"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`
+    },
+    {
+      number: "02",
+      name: "Cybersecurity",
+      description: "Proactive threat intelligence, penetration testing, and enterprise-grade defense architectures. We identify vulnerabilities before adversaries do and build layered protection across your entire attack surface.",
+      tags: ["Pen Testing", "SOC", "Zero Trust", "Compliance"],
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="service-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`
+    },
+    {
+      number: "03",
+      name: "Systems Administration",
+      description: "Reliable management of Linux, Windows, and hybrid environments. From patch management to performance optimization, we ensure your systems are stable, secure, and performing at their peak.",
+      tags: ["Linux/Unix", "Windows Server", "Virtualization", "Monitoring"],
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="service-icon"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>`
+    },
+    {
+      number: "04",
+      name: "Strategic Consulting",
+      description: "Technology strategy aligned to business outcomes. We partner with leadership to map digital transformation roadmaps, evaluate vendor ecosystems, and build investment cases for critical technology decisions.",
+      tags: ["Digital Transformation", "IT Strategy", "Audit", "Roadmapping"],
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="service-icon"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`
+    }
+  ],
+
+  portfolio: [
+    {
+      title: "Financial Infrastructure Overhaul",
+      category: "Systems Architecture",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80&auto=format&fit=crop",
+      span: "md:col-span-7",
+      height: "380px"
+    },
+    {
+      title: "Zero-Trust Security Framework",
+      category: "Cybersecurity",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80&auto=format&fit=crop",
+      span: "md:col-span-5",
+      height: "380px"
+    },
+    {
+      title: "Multi-Cloud Migration",
+      category: "Cloud Engineering",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80&auto=format&fit=crop",
+      span: "md:col-span-5",
+      height: "320px"
+    },
+    {
+      title: "Enterprise SOC Implementation",
+      category: "Security Operations",
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=80&auto=format&fit=crop",
+      span: "md:col-span-7",
+      height: "320px"
+    }
+  ]
+};
+
+// ── EJS-style Template Renderer ───────────────────────────────────
+function renderTemplate(templateFn, item) {
+  return templateFn(item);
+}
+
+// ── Render Services ───────────────────────────────────────────────
+function serviceTemplate(s) {
+  return `
+    <div class="service-card bg-polar-black reveal" style="background:#0a0a0a;">
+      <div class="service-number">${s.number}</div>
+      ${s.icon}
+      <h3 class="service-name">${s.name}</h3>
+      <p class="service-desc">${s.description}</p>
+      <div class="service-tags">
+        ${s.tags.map(t => `<span class="service-tag">${t}</span>`).join('')}
+      </div>
+    </div>
+  `;
+}
+
+document.getElementById('services-grid').innerHTML =
+  data.services.map(s => renderTemplate(serviceTemplate, s)).join('');
+
+// ── Render Portfolio ──────────────────────────────────────────────
+function portfolioTemplate(p) {
+  return `
+    <div class="portfolio-item ${p.span} reveal" style="height:${p.height};">
+      <img src="${p.image}" alt="${p.title}" loading="lazy" />
+      <div class="portfolio-overlay">
+        <div class="portfolio-title">${p.title}</div>
+        <div class="portfolio-cat">${p.category}</div>
+      </div>
+    </div>
+  `;
+}
+
+document.getElementById('portfolio-grid').innerHTML =
+  data.portfolio.map(p => renderTemplate(portfolioTemplate, p)).join('');
+
+
+// ── Scroll-based Header ───────────────────────────────────────────
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ── Intersection Observer for Reveal ─────────────────────────────
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── Animated Stats Counter ────────────────────────────────────────
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      const target = parseInt(el.getAttribute('data-count'));
+      const suffix = el.textContent.replace(/\d+/, '').trim();
+      let current = 0;
+      const step = Math.ceil(target / 50);
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = current + suffix;
+        if (current >= target) clearInterval(timer);
+      }, 28);
+      statsObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-count]').forEach(el => statsObserver.observe(el));
+
+
+
+document.querySelectorAll('a, button, input, textarea, select').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.style.transform += ' scale(2)';
+    ring.style.width = '52px';
+    ring.style.height = '52px';
+    ring.style.borderColor = 'rgba(245,245,240,0.2)';
+  });
+  el.addEventListener('mouseleave', () => {
+    ring.style.width = '36px';
+    ring.style.height = '36px';
+    ring.style.borderColor = 'rgba(245,245,240,0.4)';
+  });
+});
+
+// ── Form Submit Handler ───────────────────────────────────────────
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const btn = e.currentTarget;
+  btn.innerHTML = `
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+    Message Sent`;
+  btn.style.background = 'transparent';
+  btn.style.color = '#f5f5f0';
+  btn.style.borderColor = 'rgba(245,245,240,0.25)';
+  setTimeout(() => {
+    btn.innerHTML = `Send Message <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+    btn.style.background = '';
+    btn.style.color = '';
+    btn.style.borderColor = '';
+  }, 4000);
+}
+
+// ── Mobile Menu Toggle ─────────────────────────────────────────────
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+mobileMenuToggle.addEventListener('click', () => {
+  mobileMenuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenuToggle.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  const isClickInsideNav = mobileMenu.contains(e.target);
+  const isClickOnToggle = mobileMenuToggle.contains(e.target);
+  
+  if (!isClickInsideNav && !isClickOnToggle && mobileMenu.classList.contains('active')) {
+    mobileMenuToggle.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  }
+});
+
+// Close menu on window resize (back to desktop view)
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    mobileMenuToggle.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  }
+});
+
+</script>
+</body>
+</html>
