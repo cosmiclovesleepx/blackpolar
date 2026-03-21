@@ -1,14 +1,14 @@
 /**
- * PM2 Ecosystem Configuration
- * 
+ * PM2 Ecosystem Configuration (.cjs para ESM)
+ *
  * Uso:
- *   pm2 start ecosystem.config.js          # Iniciar todos los servers
+ *   pm2 start ecosystem.config.cjs          # Iniciar todos los servers
  *   pm2 logs                                # Ver logs en vivo
  *   pm2 monit                               # Ver monitor
  *   pm2 status                              # Ver status
  *   pm2 restart all                         # Reiniciar todos
  *   pm2 delete all                          # Parar todos
- *   pm2 start ecosystem.config.js --only main-app  # Iniciar solo uno
+ *   pm2 start ecosystem.config.cjs --only main-app  # Iniciar solo uno
  */
 
 module.exports = {
@@ -17,39 +17,22 @@ module.exports = {
     // MAIN APP (Puerto 3000)
     // ==========================================
     {
-      // Identificador único
       name: 'main-app',
-
-      // Script a ejecutar
       script: 'src/apps/main/server.js',
-
-      // Número de instancias (cluster mode)
-      // "max" = número de CPUs disponibles
-      instances: 2,
-
-      // Modo de ejecución: 'cluster' o 'fork'
+      instances: 'max',
       exec_mode: 'cluster',
-
-      // Variables de entorno
+      cwd: '/var/www/black-polar',
       env: {
         NODE_ENV: 'production',
         MAIN_PORT: 3000,
       },
-
-      // Archivos de log
       error_file: './logs/main-error.log',
       out_file: './logs/main-out.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-
-      // Reiniciar si la memoria excede este limit
       max_memory_restart: '500M',
-
-      // Señal de graceful shutdown
       kill_timeout: 5000,
-
-      // Otros
       autorestart: true,
-      watch: false, // Set to true para reinicar al cambiar archivos
+      watch: false,
     },
 
     // ==========================================
@@ -58,8 +41,9 @@ module.exports = {
     {
       name: 'portfolios-app',
       script: 'src/apps/portfolios/server.js',
-      instances: 2,
+      instances: 'max',
       exec_mode: 'cluster',
+      cwd: '/var/www/black-polar',
       env: {
         NODE_ENV: 'production',
         PORTFOLIOS_PORT: 4000,
@@ -70,6 +54,7 @@ module.exports = {
       max_memory_restart: '500M',
       kill_timeout: 5000,
       autorestart: true,
+      watch: false,
     },
 
     // ==========================================
@@ -78,8 +63,9 @@ module.exports = {
     {
       name: 'tlm-app',
       script: 'src/apps/tlm/server.js',
-      instances: 2,
+      instances: 'max',
       exec_mode: 'cluster',
+      cwd: '/var/www/black-polar',
       env: {
         NODE_ENV: 'production',
         TLM_PORT: 5000,
@@ -90,28 +76,24 @@ module.exports = {
       max_memory_restart: '500M',
       kill_timeout: 5000,
       autorestart: true,
+      watch: false,
     },
   ],
 
-  // Configuración global
+  // ==========================================
+  // DEPLOY (OPCIONAL)
+  // ==========================================
   deploy: {
     production: {
-      // Usuario@host
       user: 'ubuntu',
-      host: 'midominio.com',
-
-      // Directorio de destino en el servidor
-      path: '/var/www/black-polar',
-
-      // Rama de git
+      host: 'blackpolar.org',
       ref: 'origin/main',
-
-      // Comandos a ejecutar en deploy
+      repo: 'git@github.com:cosmiclovesleepx/blackpolar.git',
+      path: '/var/www/blackpolar',
       'post-deploy':
-        'npm ci --only=production && pm2 restart ecosystem.config.js',
-
-      // Ejecutar ssh en los servidores
-      'post-setup': 'npm ci --only=production',
+        'npm ci --omit=dev && mkdir -p logs && pm2 reload ecosystem.config.cjs --env production',
+      'post-setup':
+        'npm ci --omit=dev && mkdir -p logs',
     },
   },
 };
