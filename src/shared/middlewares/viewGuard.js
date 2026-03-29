@@ -13,6 +13,8 @@ const ALLOWED_VIEWS = new Set([
   'portfolio',
   'contact',
   'error',
+  'login',
+  'registro'
 ]);
 
 export const viewGuard = (req, res, next) => {

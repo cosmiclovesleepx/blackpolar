@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="icon" href="/public/assets/image/favicon.ico" type="image/x-icon">
+
+  <meta name="description" content="Black Polar is a technology services firm specializing in mission-critical infrastructure, threat defense, and digital transformation.">
+  <meta name="keywords"    content="technology, services, cybersecurity, systems administration, consulting">
+  <meta name="author"      content="BLACK POLAR GROUP">
+
+  <meta property="og:title"       content="Black Polar">
+  <meta property="og:description" content="Black Polar — precision-engineered technology services.">
+  <meta property="og:image"       content="/public/assets/image/preview.png">
+  <meta property="og:type"        content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,200;0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <title>Login - Black Polar</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="public/css/login.css">
+
+  <link rel="icon" href="/public/assets/image/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
+
+    <!-- CAJA LOGIN -->
+    <div class="login-box">
+
+      <!-- TÍTULO -->
+      <h1 class="title">LOGIN</h1>
+
+      <!-- FORMULARIO -->
+      <form id="loginForm" method="POST" action="/login">
+
+        <!-- EMAIL -->
+        <div class="input-group">
+          <label>Correo</label>
+
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="ejemplo@email.com"
+          >
+
+          <span id="emailError" class="error hidden">
+            Email inválido
+          </span>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="input-group password-group">
+
+          <label>Contraseña</label>
+
+          <input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="********"
+          >
+
+          <button type="button" id="togglePassword" class="toggle-btn">
+            Mostrar
+          </button>
+
+          <span id="passwordError" class="error hidden">
+            La contraseña es obligatoria
+          </span>
+        </div>
+
+        <!-- OLVIDÉ PASSWORD -->
+        <div class="forgot">
+          <a href="/forgot-password">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <!-- BOTÓN -->
+        <button type="submit" class="btn-login">
+          Entrar
+        </button>
+
+      </form>
+
+      <!-- REGISTRO -->
+      <div class="register">
+        <p>
+          ¿No tienes cuenta?
+          <a href="/registro">Regístrate</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="public/js/login.js"></script>
+
+</body>
+</html>

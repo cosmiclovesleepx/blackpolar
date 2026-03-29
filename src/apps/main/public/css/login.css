@@ -1,0 +1,177 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIABLES (tu paleta polar) ===== */
+:root {
+  --black: #080808;
+  --white: #f5f5f0;
+  --gray: #1a1a1a;
+  --mid: #2e2e2e;
+  --muted: #888888;
+  --accent: #e8e8e0;
+}
+
+/* ===== BODY ===== */
+body {
+  position: relative;
+  background: url('../assets/image/bp.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Overlay oscuro (MUY IMPORTANTE) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 8, 8, 0.75);
+  z-index: 0;
+}
+
+/* Asegura que el contenido esté encima */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ===== CONTENEDOR ===== */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== CAJA LOGIN ===== */
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  background: var(--gray);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* ===== TÍTULO ===== */
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+
+/* ===== INPUTS ===== */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 13px;
+  color: var(--white);
+  margin-bottom: 5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.input-group input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--mid);
+  padding: 8px 0;
+  color: var(--white);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+/* ===== PASSWORD ===== */
+.password-group {
+  position: relative;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  color: var(--accent);
+}
+
+/* ===== ERROR ===== */
+.error {
+  font-size: 11px;
+  color: red;
+  margin-top: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== LINK ===== */
+.forgot {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.forgot a {
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.forgot a:hover {
+  color: var(--accent);
+}
+
+/* ===== BOTÓN ===== */
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: var(--accent);
+  color: var(--black);
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  opacity: 0.8;
+}
+
+/* ===== REGISTRO ===== */
+.register {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}

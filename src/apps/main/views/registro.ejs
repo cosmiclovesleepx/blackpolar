@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Black Polar — Technology Services</title>
+  <link rel="icon" href="/public/assets/image/favicon.ico" type="image/x-icon">
+
+  <meta name="description" content="Black Polar is a technology services firm specializing in mission-critical infrastructure, threat defense, and digital transformation.">
+  <meta name="keywords"    content="technology, services, cybersecurity, systems administration, consulting">
+  <meta name="author"      content="BLACK POLAR GROUP">
+
+  <meta property="og:title"       content="Black Polar">
+  <meta property="og:description" content="Black Polar — precision-engineered technology services.">
+  <meta property="og:image"       content="/public/assets/image/preview.png">
+  <meta property="og:type"        content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,200;0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="public/css/registro.css"/>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="login-box">
+
+    <h1 class="title">REGISTRO</h1>
+
+    <form id="registerForm" method="POST" action="/register">
+
+      <!-- GRID -->
+      <div class="form-grid">
+
+        <!-- NOMBRE -->
+        <div class="input-group">
+          <label>Nombre*</label>
+          <input type="text" name="nombre" placeholder="Tu nombre">
+        </div>
+
+        <!-- APELLIDO -->
+        <div class="input-group">
+          <label>Apellido*</label>
+          <input type="text" name="apellido" placeholder="Tu apellido">
+        </div>
+
+        <!-- TIPO ID -->
+        <div class="input-group">
+          <label>Tipo ID*</label>
+          <select name="tipoId">
+            <option>Selecciona</option>
+            <option>CC</option>
+            <option>TI</option>
+          </select>
+        </div>
+
+        <!-- NUMERO -->
+        <div class="input-group">
+          <label>Número*</label>
+          <input type="text" name="numero">
+        </div>
+
+        <!-- GENERO -->
+        <div class="input-group">
+          <label>Género</label>
+          <select name="genero">
+            <option>Selecciona</option>
+            <option>Masculino</option>
+            <option>Femenino</option>
+          </select>
+        </div>
+
+        <!-- FECHA -->
+        <div class="input-group">
+          <label>Fecha Nacimiento</label>
+          <input type="date" name="fecha">
+        </div>
+
+        <!-- CIUDAD -->
+        <div class="input-group">
+          <label>Ciudad</label>
+          <input type="text" name="ciudad">
+        </div>
+
+        <!-- BARRIO -->
+        <div class="input-group">
+          <label>Barrio</label>
+          <input type="text" name="barrio">
+        </div>
+
+        <!-- DIRECCIÓN (full width) -->
+        <div class="input-group full">
+          <label>Dirección</label>
+          <input type="text" name="direccion">
+        </div>
+
+      </div>
+
+      <!-- SEPARADOR -->
+      <h2 class="subtitle">Acceso a la cuenta</h2>
+
+      <!-- ACCESO -->
+      <div class="form-grid">
+
+        <div class="input-group full">
+          <label>Correo*</label>
+          <input type="email" name="email">
+        </div>
+
+        <div class="input-group full">
+          <label>Confirmar correo*</label>
+          <input type="email" name="confirmEmail">
+        </div>
+
+        <div class="input-group full">
+          <label>Contraseña*</label>
+          <input type="password" name="password">
+        </div>
+
+        <div class="input-group full">
+          <label>Confirmar contraseña*</label>
+          <input type="password" name="confirmPassword">
+        </div>
+
+      </div>
+
+      <!-- CHECK -->
+      <div class="checkbox">
+        <input type="checkbox" required>
+        <span>Acepto términos y condiciones</span>
+      </div>
+
+      <!-- BOTONES -->
+      <div class="buttons">
+        <button type="submit" class="btn-primary">Crear cuenta</button>
+        <a href="/login" class="btn-secondary">Iniciar sesión</a>
+      </div>
+
+    </form>
+
+  </div>
+  
+</div>
+
+</body>   
+</html>
