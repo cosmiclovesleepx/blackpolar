@@ -1,0 +1,35 @@
+{
+  "name": "blackpolar",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:web": "pnpm --filter @blackpolar/web dev",
+    "dev:dashboard": "pnpm --filter @blackpolar/dashboard dev",
+    "dev:api": "pnpm --filter @blackpolar/api dev",
+    "build": "turbo run build",
+    "build:web": "pnpm --filter @blackpolar/web build",
+    "build:dashboard": "pnpm --filter @blackpolar/dashboard build",
+    "build:api": "pnpm --filter @blackpolar/api build",
+    "start": "pm2 start ecosystem.config.cjs",
+    "stop": "pm2 stop ecosystem.config.cjs",
+    "restart": "pm2 restart ecosystem.config.cjs",
+    "logs": "pm2 logs",
+    "db:generate": "turbo run db:generate",
+    "db:push": "turbo run db:push",
+    "db:studio": "pnpm --filter @blackpolar/database db:studio",
+    "db:migrate": "pnpm --filter @blackpolar/database db:migrate",
+    "type-check": "turbo run type-check",
+    "lint": "turbo run lint",
+    "clean": "rm -rf apps/*/.next apps/api/dist apps/*/.turbo packages/*/.turbo node_modules/.cache"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "typescript": "^5.7.0",
+    "prettier": "^3.4.0"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20"
+  }
+}
