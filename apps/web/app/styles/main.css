@@ -202,6 +202,7 @@ nav a:hover::after { transform: scaleX(1); }
   display: flex; gap: 40px; align-items: center;
   animation: marquee 28s linear infinite;
   white-space: nowrap; will-change: transform;
+  
 }
 .marquee-item {
   font-family: var(--bp-font-d);
@@ -219,16 +220,19 @@ nav a:hover::after { transform: scaleX(1); }
   font-family: var(--bp-font-m);
   font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase;
   color: var(--bp-muted);
+  
 }
 .section-rule {
   width: 32px; height: 1px;
   background: rgba(245,245,240,0.15);
   margin: 14px 0 18px;
+  
 }
 .section-title {
   font-family: var(--bp-font-d);
   font-size: clamp(3rem, 7vw, 6rem);
   letter-spacing: 0.03em; line-height: 0.95; color: var(--bp-white);
+  
 }
 .text-outline {
   display: block; color: transparent;
@@ -254,6 +258,7 @@ nav a:hover::after { transform: scaleX(1); }
   font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--bp-muted); text-decoration: none;
   transition: color var(--bp-ease), gap var(--bp-ease);
+  
 }
 .btn-ghost:hover { color: var(--bp-white); gap: 14px; }
 
@@ -263,12 +268,14 @@ nav a:hover::after { transform: scaleX(1); }
 .about-section {
   padding: 100px 48px;
   position: relative;
+  
 }
 .about-inner {
   max-width: 1280px; margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px; align-items: center;
+  
 }
 .about-body {
   font-size: 0.9rem; font-weight: 300;
@@ -286,12 +293,14 @@ nav a:hover::after { transform: scaleX(1); }
 .about-img-wrap {
   border: 1px solid var(--bp-faint);
   padding: 2px; position: relative; overflow: hidden;
+  
 }
 .about-img {
   width: 100%; display: block;
   filter: grayscale(100%) brightness(0.55) contrast(1.1);
   aspect-ratio: 4/3; object-fit: cover;
   transition: filter 0.5s ease;
+  
 }
 .about-img-wrap:hover .about-img { filter: grayscale(80%) brightness(0.65) contrast(1.1); }
 

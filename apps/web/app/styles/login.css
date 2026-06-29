@@ -23,7 +23,8 @@ body {
   background-size: cover;
   color: var(--white);
   font-family: 'DM Sans', sans-serif;
-}
+  
+} 
 
 /* Overlay oscuro (MUY IMPORTANTE) */
 body::before {
@@ -50,7 +51,10 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
 }
+
 
 /* ===== CAJA LOGIN ===== */
 .login-box {

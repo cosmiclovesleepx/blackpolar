@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import "../styles/register.css";
 
 export const metadata: Metadata = {
   title: "Register — Black Polar",

@@ -19,6 +19,7 @@
 }
 
 /* ===== BODY ===== */
+
 body {
   position: relative;
   background: url('/assets/main/image/bp.jpg') no-repeat center center fixed;
@@ -51,6 +52,8 @@ body::before {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* ===== CAJA LOGIN ===== */

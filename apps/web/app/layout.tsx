@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "./styles/login.css";
-import "./styles/register.css";
+
 
 export const metadata: Metadata = {
   title: "Black Polar",

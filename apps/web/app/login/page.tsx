@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import "../styles/login.css";
 
 export const metadata: Metadata = {
   title: "Login — Black Polar",
